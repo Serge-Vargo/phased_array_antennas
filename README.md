@@ -17,15 +17,24 @@ Phased-array antennas are constructed *simply* by arranging a number of individu
 
 ###### Single Antenna Topologies
 
-Given the voltage and current distributions present in an antenna, when energized, we can calculate the corresponding E-field and H-field and consequently find the radiation pattern from the time-average Poynting Vector:
+Given the voltage and current distributions present in an antenna, when energized, the corresponding E-field and H-field can be calculated and consequently the radiation pattern found from the time-average Poynting Vector:
 
-![\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}]
+$ S_{av} = \frac{1}{2}  \mathbb{R} [\tilde{E} \times \tilde{H^*} ] $
 
-Electrochemical Impedance Spectroscopy (EIS) is a laboratory technique that provides impedance characterization for electrode-electrolyte interfaces. This technique allows us to model such an interface as an electric circuit consisting of lump elements. Impedance characterization is very important in the field of neural engineering as it provides valuable information of the electrical performance of a neural interface device.
+Using MATLAB's Antenna Designer app, we can obtain the radiation patterns of a dipole, a horn and helix antenna:
 
-For example, an electrode placed in the surface of the brain will come in contact with the cerebrospinal fluid and brain tissue. The goal is to couple the electrode to neurons to record brain activity and avoid interaction with other brain cells that might interfere in the recording. Changes in the impedance are often correlated to cell spreading and locomotion, bacterial growth and antigen-antibody reactions caused by the intrusion of a foreign object in the brain.
-
-In this project, the module `eismodels.py` provides equivalent circuit models that have long been used to model interface impedance: Warburg elements, Randles cell, Gouy-Chapman-Stern model, and others. A combination of these models can also be obtain to characterize the performance of a neural probe under test.
+<p align="center">
+  <img src=pics/dipole_radiation.png>
+</p>
+<p align="center">
+  Voltage and current distributions, 2D and 3D radiation pattern of dipole antenna
+</p>
+<p align="center">
+  <img src=pics/helix_horn_radiation.png>
+</p>
+<p align="center">
+  3D and 2D radiation pattern of helix and horn antennas
+</p>
 
 ## How to use
 
