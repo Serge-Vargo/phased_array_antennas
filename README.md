@@ -187,8 +187,7 @@ Provided the weight and phase distributions are uniform and linear respectively.
 In the second script, the more general expression is used instead in order to simulate the shaping of the beam via non-uniform weighting functions.
 
 <p align="center">
-<img src="https://render.githubusercontent.com/render/math?math=F_a(\theta) = \Bigg|  \sum_{i=0}^{N-1} a_i \cdot e^{jkid(cos\theta - cos\theta_o
-)} \Bigg|^2">
+<img src="https://render.githubusercontent.com/render/math?math=F_a(\theta) = \Bigg|  \sum_{i=0}^{N-1} a_i \cdot e^{jkid(cos\theta - cos\theta_o)} \Bigg|^2">
 </p>
 
 For a textbook type reference on phased array antennas, I keep a copy of Ulaby's and Ravaioli's [text](https://smile.amazon.com/-/es/Fawwaz-Ulaby/dp/0133356817/ref=sr_1_1?crid=2CX6V3F6I0PUA&dchild=1&ie=UTF8&keywords=ulaby%20electromagnetics&language=en_US&qid=1611542071&sprefix=ulaby%20%2Caps%2C154&sr=8-1) "Fundamentals of Applied Electromagnetics." In this text the mathematical derivation is shown from first principles.
