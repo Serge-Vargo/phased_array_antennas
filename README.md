@@ -4,7 +4,7 @@
 
 ## Intro
 
-Phased-array antennas are constructed by arranging a number of individual antennas (dipoles, horns, etc.) to form an array. In the array, attenuators and phase sifters can be used to control the magintude and phase of the signal feeding each antenna.
+Phased-array antennas are constructed by arranging a number of individual antennas (dipoles, horns, etc.) to form an array. In the array, attenuators and phase shifters can be used to control the magnitude and phase of the signal feeding each antenna.
 
 <p align="center">
   <img src=pics/dipole_phased_array_antenna.png width="300" height="300">
@@ -45,7 +45,7 @@ As shown, for each antenna there is a corresponding radiation pattern associated
 ###### How it works - wave interference
 The physical principle behind a versatile radiation pattern is **wave interference**. The interference phenomena in waves was discovered a long time ago and is no novel concept in the field. However, as with many other fields in engineering, the recent advances in mixed-signal hardware and novel digital signal processing (DSP) algorithms have allowed for the cost effective closed-loop implementation of phased-array antennas. Without these improvements the implementation of phased-array antennas was limited to complex and mostly analog systems such as the AN/FPS-85 Phased Array Radar facility in Florida.
 
-Recall from the double slit experiment that due to constructive and destructive interferace of waves, the resulting wave intensity pattern of two isotropic wave sources resembles the amplitude of a *sinc* function.
+Recall from the double slit experiment that due to constructive and destructive interference of waves, the resulting wave intensity pattern of two isotropic wave sources resembles the amplitude of a *sinc* function.
 
 <p align="center">
   <img src=pics/wave_interferance.png width="500" height="400">
@@ -58,7 +58,7 @@ Recall from the double slit experiment that due to constructive and destructive 
 Exploiting this concept with antennas and applying the pattern multiplication principle, we can theoretically analyze the performance of any array with the <i>Array Pattern</i> (F<sub>a</sub> or AF), and treating the antennas as isotropic. Multiplying the <i>Element Pattern</i>, F<sub>e</sub> (shown above for dipoles, helix and horn antennas) at the end results in the total radiation pattern.
 </p>
 
-## Phased-Array Atennas
+## Phased-Array Antennas
 
 For an antenna array with uniform amplitude weights and no phase differences between neighbouring elements, the resultant radiation pattern is the magnitude of a *sinc* function, shown in polar coordinates below:
 
@@ -78,7 +78,7 @@ IC phase shifters or true-time delay circuits can be used to control the relativ
   <source src="pics/Steering Beam Polar.mp4" type="video/mp4">
 </figure>
 
-The ability to electronically steer an array is quite desirible as it eliminates the need to mechanically steer an antenna to change its beam's direction. In addition, electronic steering allows beam scanning at very fast rates.
+The ability to electronically steer an array is quite desirable as it eliminates the need to mechanically steer an antenna to change its beam's direction. In addition, electronic steering allows beam scanning at very fast rates.
 ### Shaping
 
 Steering can be achieved with phase-shifters, but the shape remained practically the same. Here we show how controlling the amplitude weights of the antenna elements can result in changes in the shape of the radiation pattern.
@@ -114,7 +114,7 @@ If instead of a uniform weight distribution, we apply a Hanning distribution fol
    Radiation pattern in polar coordinates from a Hanning weight distribution.
 </p>
 
-Applying a Hannning weight distribution will provide a much higher directivity and the power dissipated in the side lobes will be significantly reduced.
+Applying a Hanning weight distribution will provide a much higher directivity and the power dissipated in the side lobes will be significantly reduced.
 
 ##### Taylor Function
 
@@ -153,7 +153,7 @@ As with any other featured technology, there are always tradeoffs one should be 
   <img src=pics/GratingLobes.png >
 </p>
 
-Analogously to the Nyquist theorem (or sampling theorem) in the time domain, which states that the sampling frequency needed to reproduce an incoming signal must be at least 2 times higher than the frequency of the signal, space aliasing can occur if antenna elements are placed too far or too close together with respect to the wavelenght of the signal. To avoid grating lobes in a linear array, the distance between neighboring antennas should be between half and a full wavelength,
+Analogously to the Nyquist theorem (or sampling theorem) in the time domain, which states that the sampling frequency needed to reproduce an incoming signal must be at least 2 times higher than the frequency of the signal, space aliasing can occur if antenna elements are placed too far or too close together with respect to the wavelength of the signal. To avoid grating lobes in a linear array, the distance between neighboring antennas should be between half and a full wavelength,
 
 <p align="center">
 <img src="https://render.githubusercontent.com/render/math?math=\lambda /2 < d < \lambda">
@@ -176,7 +176,18 @@ In this repository, there are two scripts to perform linear phased-array simulat
 In the first script, the Array Factor (AF) or Array Pattern (F<sub>a</sub>) is assumed to be:
 
 <p align="center">
-<img src="https://render.githubusercontent.com/render/math?math=F_a(\theta) = \frac{sin^2(\frac{N}{2}kd(cos\theta -cos\theta_o))}{sin^2(\frac{1}{2}kd(cos\theta - cos\theta_o))">
+<img src="https://render.githubusercontent.com/render/math?math=F_a(\theta) = \frac{sin^2(\frac{N}{2}kd(cos\theta -cos\theta_o))}{sin^2(\frac{1}{2}kd(cos\theta - cos\theta_o))}">
 </p>
 
-Provided uniform weight distribution and
+Provided the weight and phase distributions are uniform and linear respectively.
+
+In the second script, the more general expression is used instead in order to simulate the shaping of the beam via non-uniform weighting functions.
+
+<p align="center">
+<img src="https://render.githubusercontent.com/render/math?math=F_a(\theta) = \Bigg|  \sum_{i=0}^{N-1} a_i \cdot e^{jkid(cos\theta - cos\theta_o
+)} \Bigg|^2">
+</p>
+
+For a textbook type reference on phased array antennas, I keep a copy of Ulaby's and Ravaioli's [text](https://smile.amazon.com/-/es/Fawwaz-Ulaby/dp/0133356817/ref=sr_1_1?crid=2CX6V3F6I0PUA&dchild=1&ie=UTF8&keywords=ulaby%20electromagnetics&language=en_US&qid=1611542071&sprefix=ulaby%20%2Caps%2C154&sr=8-1) "Fundamentals of Applied Electromagnetics." In this text the mathematical derivation is shown from first principles.
+
+Another good resource on phased-array antennas is the three-part [series](https://www.analog.com/en/analog-dialogue/articles/phased-array-antenna-patterns-part1.html) of articles by IC engineers at Analog Devices Inc.
