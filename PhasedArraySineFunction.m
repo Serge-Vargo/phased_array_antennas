@@ -1,6 +1,5 @@
 % Sergio Mendez Vargo
-% ECE-300 Electromagnetism
-% Final Project
+% GitHub: @Serge-Vargo
 % Phased array antennas
 
 %% @verbatim 
@@ -77,7 +76,7 @@ title(['Sine Space','AF(u) for N = 32'])
 %weights = ones(1,N);%element excitation weights
 %A_n = A_o.*weights; %Element excitation
 
-theta_o = 45;   %steering angle (deg)
+theta_o = -45;   %steering angle (deg)
 theta_o_rad = deg2rad(theta_o); %convert to radians
 
 gamma = k*d*sin(theta_rad);  %gamma = pi.*sin(theta)

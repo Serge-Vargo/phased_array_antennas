@@ -1,6 +1,5 @@
 % Sergio Mendez Vargo
-% ECE-300 Electromagnetism
-% Final Project
+% GitHub: @Serge-Vargo
 % Phased array antennas
 
 %% @verbatim 
