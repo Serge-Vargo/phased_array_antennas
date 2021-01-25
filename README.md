@@ -20,7 +20,7 @@ Phased-array antennas are constructed by arranging a number of individual antenn
 
 Given the voltage and current distributions present in an antenna when energized, the corresponding E-field and H-field can be calculated. Consequently the radiation pattern can be found from the time-average Poynting Vector:
 
-<img src="https://render.githubusercontent.com/render/math?math= S_{av} = \frac{1}{2}  \mathbb{R} [\tilde{E} \times \tilde{H^*} ]">
+<img src="https://render.githubusercontent.com/render/math?math=S_{av} = \frac{1}{2}  \mathbb{R} [\tilde{E} \times \tilde{H^*} ]">
 
 <!-- $ S_{av} = \frac{1}{2}  \mathbb{R} [\tilde{E} \times \tilde{H^*} ] $ -->
 
