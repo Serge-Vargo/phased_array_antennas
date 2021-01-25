@@ -87,8 +87,8 @@ Steering can be achieved with phase-shifters, but the shape remained practically
 As mentioned above, the radiation pattern shown assumed a uniform weight distribution on all the antennas:
 
 <p align="center">
-  <img src=pics/RadPatternPolar.png width="450" height="280">
-  <img src=pics/UniformWeighting.png  width="450" height="325">
+  <img src=pics/RadPatternPolar.png width="375" height="280">
+  <img src=pics/UniformWeighting.png  width="375" height="280">
 </p>
 <p align="center">
    Radiation pattern in polar coordinates from a uniform weight distribution
@@ -107,8 +107,8 @@ If instead of a uniform weight distribution, we apply a Hanning distribution fol
  the antennas in the center of the array would receive stronger signals than the antennas at the edges. We can predict a pattern with a *pointier* profile, as shown.
 
 <p align="center">
-  <img src=pics/RadPatternHanningPolar.png width="450" height="280">
-  <img src=pics/HanningWeight.png  width="450" height="325">
+  <img src=pics/RadPatternHanningPolar.png width="375" height="280">
+  <img src=pics/HanningWeight.png  width="375" height="280">
 </p>
 <p align="center">
    Radiation pattern in polar coordinates from a Hanning weight distribution.
@@ -121,8 +121,8 @@ Applying a Hanning weight distribution will provide a much higher directivity an
 Implementing the Hanning weight distribution, however, is not easily realizable. Instead, a taylor distribution function is commonly used. This DSP algorithm can be accessed via multiple sources. In MATLAB, the function `taylorwin(N, nbar, sll)` returns a weight distribution for `N` elements,  `sll`, the desired dB level of nearest sidelobes, and `nbar` the number of nearest side lobs with the sll value.
 
 <p align="center">
-  <img src=pics/RadPatternTayPolar.png width="450" height="280">
-  <img src=pics/TaylorWeights.png  width="450" height="325">
+  <img src=pics/RadPatternTayPolar.png width="375" height="240">
+  <img src=pics/TaylorWeights.png  width="375" height="280">
 </p>
 <p align="center">
    Radiation pattern in polar coordinates from the Taylor weight distribution, <code>taylorwin(32, 6, -40)</code>
@@ -136,8 +136,8 @@ With a similar weight distribution as with the Hanning function, the shape of th
 Comparing the three weight distributions, we see the differences in the radiation patterns and the main beamwidth. Depending on the constraints of the application, the widening of the beamwidth might need to be considered as a design parameter. In either case, controlling the weights of the signals feeding the individual antennas can provide a variety of desired radiation patterns depending on the application.
 
 <p align="center">
-  <img src=pics/ComparisonPattern.png width="450" height="325">
-  <img src=pics/ComparisonBeamWidth.png  width="450" height="325">
+  <img src=pics/ComparisonPattern.png width="375" height="280">
+  <img src=pics/ComparisonBeamWidth.png  width="375" height="280">
   <img src=pics/ComparisonWeights.png  width="450" height="325">
 </p>
 <p align="center">
