@@ -78,7 +78,7 @@ IC phase shifters or true-time delay circuits can be used to control the relativ
   <source src="pics/Steering Beam Polar.mp4" type="video/mp4">
 </figure> -->
 <figure class="video_container">
-  <iframe src="https://drive.google.com/file/d/11GOM1FSf_sGQsIZtWVrXK1N4pmeUkX92/view?usp=sharing" frameborder="0" allowfullscreen="true"> </iframe>
+  <iframe src="https://drive.google.com/file/d/11GOM1FSf_sGQsIZtWVrXK1N4pmeUkX92/preview" frameborder="0" allowfullscreen="true"> </iframe>
 </figure>
 
 
