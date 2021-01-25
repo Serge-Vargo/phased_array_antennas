@@ -22,7 +22,7 @@ Given the voltage and current distributions present in an antenna when energized
 
 <img src="https://render.githubusercontent.com/render/math?math=S_{av} = \frac{1}{2}  \mathbb{R} [\tilde{E} \times \tilde{H^*} ]">
 
-<!-- $ S_{av} = \frac{1}{2}  \mathbb{R} [\tilde{E} \times \tilde{H^*} ] $ -->
+$ S_{av} = \frac{1}{2}  \mathbb{R} [\tilde{E} \times \tilde{H^*} ] $
 
 Using a software like MATLAB's Antenna Designer app, we obtain the radiation patterns of a dipole, a horn and helix antenna:
 
