@@ -77,11 +77,9 @@ IC phase shifters or true-time delay circuits can be used to control the relativ
 <video controls="true" allowfullscreen="true" poster="pics/Steered -45deg Polar.png">
   <source src="pics/Steering Beam Polar.mp4" type="video/mp4">
 </figure> -->
-<figure class="video_container">
-  <iframe src="https://drive.google.com/file/d/11GOM1FSf_sGQsIZtWVrXK1N4pmeUkX92/preview" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
-
-
+<p align="center">
+  <img src=pics/BeamSteeringPolar_gif.gif>
+</p>
 
 The ability to electronically steer an array is quite desirable as it eliminates the need to mechanically steer an antenna to change its beam's direction. In addition, electronic steering allows beam scanning at very fast rates.
 ### Shaping
